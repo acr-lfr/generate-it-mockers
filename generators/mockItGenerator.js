@@ -1,4 +1,7 @@
-import * as generators from './index'
+import { stringGenerator } from './stringGenerator'
+import { numberGenerator } from './numberGenerator'
+import { integerGenerator } from './integerGenerator'
+import { booleanGenerator } from './booleanGenerator'
 import { randomNumber } from './numberGenerator'
 
 const walker = (schema, schemaName) => {
@@ -10,13 +13,13 @@ const walker = (schema, schemaName) => {
   }
   switch (schema.type) {
     case 'string':
-      return generators.stringGenerator(schema, schemaName)
+      return stringGenerator(schema, schemaName)
     case 'number':
-      return generators.numberGenerator(schema, schemaName)
+      return numberGenerator(schema, schemaName)
     case 'integer':
-      return generators.integerGenerator(schema, schemaName)
+      return integerGenerator(schema, schemaName)
     case 'boolean':
-      return generators.booleanGenerator(schema)
+      return booleanGenerator(schema)
     case 'array':
       if (!schema.items) {
         return []

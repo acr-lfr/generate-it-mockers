@@ -4,11 +4,10 @@
   "description": "Mockers library used by the OpenAPI Nodegen",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/acrontum/openapi-nodegen"
+    "url": "https://github.com/acrontum/openapi-nodegen-mockers"
   },
   "author": "",
   "license": "ISC"
