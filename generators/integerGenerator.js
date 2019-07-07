@@ -1,6 +1,6 @@
-import { randomNumber } from './numberGenerator'
+const randomNumber = require('./randomNumberGenerator')
 
-export const integerGenerator = (schemaPart) => {
+module.exports = (schemaPart) => {
   let minimum = schemaPart.minimum || 0
   let maximum = schemaPart.maximum || 100
   if (!schemaPart.exclusiveMinimum) {

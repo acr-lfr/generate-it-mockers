@@ -1,10 +1,10 @@
-import { randomNumber } from './numberGenerator'
-import { fakerGenerator } from './fakerGenerator'
+const randomNumber = require('./randomNumberGenerator')
+const fakerGenerator = require('./fakerGenerator')
 
 const uuidv1 = require('uuid/v1')
 const btoa = require('btoa')
 
-export const stringGenerator = (schemaPart, schemaName) => {
+module.exports = (schemaPart, schemaName) => {
   // use schemaName to fake with faker
   if (schemaPart['x-faker']) {
     const randomVal = fakerGenerator(schemaPart['x-faker'])

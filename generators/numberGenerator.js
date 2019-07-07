@@ -1,7 +1,6 @@
-export const randomNumber = (min = 1, max = 20) => {
-  return Math.floor(Math.random() * (+max - +min)) + +min
-}
-export const numberGenerator = (schemaPart) => {
+const randomNumber = require('./randomNumberGenerator')
+
+module.exports = (schemaPart) => {
   let minimum = schemaPart.minimum || 0
   let maximum = schemaPart.maximum || 100
   if (!schemaPart.exclusiveMinimum) {

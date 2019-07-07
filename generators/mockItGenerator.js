@@ -1,8 +1,8 @@
-import { stringGenerator } from './stringGenerator'
-import { numberGenerator } from './numberGenerator'
-import { integerGenerator } from './integerGenerator'
-import { booleanGenerator } from './booleanGenerator'
-import { randomNumber } from './numberGenerator'
+const stringGenerator = require('./stringGenerator')
+const numberGenerator = require('./numberGenerator')
+const integerGenerator = require('./integerGenerator')
+const booleanGenerator = require('./booleanGenerator')
+const randomNumber = require('./numberGenerator')
 
 const walker = (schema, schemaName) => {
   if (!schema.type && schema.properties) {
@@ -42,7 +42,7 @@ const walker = (schema, schemaName) => {
   }
 }
 
-export const mockItGenerator = (schema) => {
+module.exports = (schema) => {
   if (Object.keys(schema).length === 0) {
     return {}
   }

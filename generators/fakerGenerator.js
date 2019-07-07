@@ -1,8 +1,7 @@
-import faker from 'faker'
+const faker = require('faker')
+const fakerMethods = require('./fakerMethods')
 
-import fakerMethods from './fakerMethods'
-
-export const fakerGenerator = (type) => {
+module.exports = (type) => {
   const method = fakerMethods.find((m) => {
     const typeSplit = type.split('.')
     if (typeSplit.length === 1) {

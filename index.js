@@ -1,5 +1,10 @@
-export { booleanGenerator } from './generators/booleanGenerator'
-export { integerGenerator } from './generators/integerGenerator'
-export { mockItGenerator } from './generators/mockItGenerator'
-export { numberGenerator } from './generators/numberGenerator'
-export { stringGenerator } from './generators/stringGenerator'
+
+module.exports = {
+  booleanGenerator: require('./generators/booleanGenerator'),
+  fakerGenerator: require('./generators/fakerGenerator'),
+  integerGenerator: require('./generators/integerGenerator'),
+  mockItGenerator: require('./generators/mockItGenerator'),
+  numberGenerator: require('./generators/numberGenerator'),
+  randomNumberGenerator: require('./generators/randomNumberGenerator'),
+  stringGenerator: require('./generators/stringGenerator'),
+}
