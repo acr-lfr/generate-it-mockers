@@ -1,6 +1,6 @@
 {
   "name": "openapi-nodegen-mockers",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mockers library used by OpenAPI Nodegen",
   "main": "index.js",
   "scripts": {

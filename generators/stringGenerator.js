@@ -4,6 +4,18 @@ const fakerGenerator = require('./fakerGenerator')
 const uuidv1 = require('uuid/v1')
 const btoa = require('btoa')
 
+/**
+ * name: << schemaName
+ *  type: string                  |
+ *  x-faker: name.firstName       |   << these bits are the "schemaPart"
+ */
+
+/**
+ *
+ * @param {object} schemaPart Defines the type of the openapi definition
+ * @param {string} schemaName Is the attribute name
+ * @return {*|boolean|string|Date}
+ */
 module.exports = (schemaPart, schemaName) => {
   // use schemaName to fake with faker
   if (schemaPart['x-faker']) {
