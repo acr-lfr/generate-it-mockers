@@ -43,7 +43,7 @@ module.exports = (schemaPart, schemaName) => {
         const year = date.getFullYear()
         const month = date.getMonth()
         const day = date.getDate()
-        return year + '-' + month.padStart(2, '0') + '-' + day.padStart(2, '0')
+        return year + '-' + String(month).padStart(2, '0') + '-' + String(day).padStart(2, '0')
       case 'date-time':
         return new Date(Math.random() * new Date().getTime())
       case 'byte':
