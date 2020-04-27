@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Mocking library used by generate-it",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "docsify-cli": "node node_modules/docsify-cli/bin/docsify",
+    "docsify-serve": "npm run docsify-cli -- serve ./"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/acrontum/openapi-nodegen-mockers"
