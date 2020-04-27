@@ -1,12 +1,12 @@
 {
   "name": "generate-it-mockers",
-  "version": "0.0.6",
-  "description": "Mockers library used by OpenAPI Nodegen",
+  "version": "1.0.0",
+  "description": "Mocking library used by generate-it",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/acrontum/generate-it-mockers"
+    "url": "https://github.com/acrontum/openapi-nodegen-mockers"
   },
   "dependencies": {
     "faker": "^4.1.0",
