@@ -25,7 +25,7 @@ const walker = (schema, schemaName) => {
         return []
       } else {
         const min = schema.minItems || 1
-        const max = schema.minItems || 10
+        const max = schema.maxItems || 10
         const random = randomNumber(min, max)
         let arr = []
         for (let i = 0; i < random; ++i) {
