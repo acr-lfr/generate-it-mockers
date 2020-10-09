@@ -2,7 +2,7 @@ const stringGenerator = require('./stringGenerator')
 const numberGenerator = require('./numberGenerator')
 const integerGenerator = require('./integerGenerator')
 const booleanGenerator = require('./booleanGenerator')
-const randomNumber = require('./numberGenerator')
+const randomNumber = require('./randomNumberGenerator')
 
 const walker = (schema, schemaName) => {
   if (!schema.type && schema.properties) {
