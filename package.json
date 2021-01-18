@@ -1,6 +1,6 @@
 {
   "name": "generate-it-mockers",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Mocking library used by generate-it",
   "main": "index.js",
   "scripts": {},
