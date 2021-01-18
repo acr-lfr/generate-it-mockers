@@ -35,7 +35,7 @@ const walker = (schema, schemaName) => {
       }
     case 'object':
       let obj = {}
-      Object.keys(schema.properties).forEach((key) => {
+      Object.keys(schema.properties || {}).forEach((key) => {
         obj[key] = walker(schema.properties[key], key)
       })
       return obj
