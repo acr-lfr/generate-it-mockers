@@ -86,6 +86,8 @@ module.exports = (schemaPart, schemaName) => {
           ':' +
           randomNumber(1, 9) +
           randomNumber(1, 9)
+      case 'binary':
+        return Buffer.from(randomString(10, 50));
     }
   }
 
