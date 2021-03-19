@@ -32,25 +32,25 @@ const walker = (schema, schemaName, globalOverrides) => {
         const random = randomNumber(min, max)
         let arr = []
         for (let i = 0; i < random; ++i) {
-          arr.push(walker(schema.items))
+          arr.push(walker(schema.items, undefined, globalOverrides))
         }
         return arr
       }
     case 'object':
       let obj = {}
       Object.keys(schema.properties || {}).forEach((key) => {
-        obj[key] = walker(schema.properties[key], key)
+        obj[key] = walker(schema.properties[key], key, globalOverrides)
       })
       return obj
   }
 }
 
-module.exports = (schema) => {
+module.exports = (schema, globalOverrides) => {
   if (Object.keys(schema).length === 0) {
     return {}
   }
   if (!schema.type) {
     throw new Error('no type found in oa schema')
   }
-  return walker(schema)
+  return walker(schema, undefined, globalOverrides)
 }

@@ -4,7 +4,7 @@ export function fakerGenerator(type: string): string;
 
 export function integerGenerator(schemaPart: object): number;
 
-export function mockItGenerator(schemaPart: object, schemaName?: string, globalOverrides?: {
+export function mockItGenerator(schemaPart: object, globalOverrides?: {
   minItems?: number,
   maxItems?: number
 }): any;
