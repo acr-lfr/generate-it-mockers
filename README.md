@@ -73,14 +73,11 @@ return mockItGenerator({
 
 ## Helper
 
-You can override all min and max items for array by passing in an optional 3rd param:
-```
-mockItGenerator(
-  schemaPart: object, 
-  schemaName?: string, 
-  globalOverrides?: { minItems?: number, maxItems?: number}
-)
-```
+You can override all min and max items for array by passing in an optional 2nd param, globalOverrides.
+
+See the index.d.ts in this project for the available types.
+
+Overrides permitted are applied to the entire object, so for example when passing in `minItems` this is applied to all arrays in the provided schema.
 
 ## Why use this tool
 
