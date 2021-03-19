@@ -6,4 +6,4 @@ Please review the documentation here: [https://acrontum.github.io/generate-it-mo
 
 ___
 
-Generate-It-Mockers is an opensourced project from [acrontum](https://www.acrontum.de/), tested on NodeJS 12 LTS. 
+Generate-It-Mockers is an opensourced project from [acrontum](https://www.acrontum.de/), tested on the current NodeJS LTS release. 

@@ -4,7 +4,10 @@ const integerGenerator = require('./integerGenerator')
 const booleanGenerator = require('./booleanGenerator')
 const randomNumber = require('./randomNumberGenerator')
 
-const walker = (schema, schemaName) => {
+const walker = (schema, schemaName, globalOverrides) => {
+
+  globalOverrides = globalOverrides || {}
+
   if (!schema.type && schema.properties) {
     schema.type = 'object'
   }
@@ -24,8 +27,8 @@ const walker = (schema, schemaName) => {
       if (!schema.items) {
         return []
       } else {
-        const min = schema.minItems || 1
-        const max = schema.maxItems || 10
+        const min = globalOverrides.minItems || schema.minItems || 1
+        const max = globalOverrides.maxItems || schema.maxItems || 10
         const random = randomNumber(min, max)
         let arr = []
         for (let i = 0; i < random; ++i) {
