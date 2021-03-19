@@ -71,6 +71,17 @@ return mockItGenerator({
     });
 ```
 
+## Helper
+
+You can override all min and max items for array by passing in an optional 3rd param:
+```
+mockItGenerator(
+  schemaPart: object, 
+  schemaName?: string, 
+  globalOverrides?: { minItems?: number, maxItems?: number}
+)
+```
+
 ## Why use this tool
 
 When you design your API first with swagger/openapi, then you will want your backend and frontend team to start working right away without 1 team having to wait for the other.
