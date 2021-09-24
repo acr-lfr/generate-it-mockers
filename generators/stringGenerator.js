@@ -1,7 +1,7 @@
 const randomNumber = require('./randomNumberGenerator')
 const fakerGenerator = require('./fakerGenerator')
 
-const uuidv1 = require('uuid/v1')
+const uuidv4 = require('uuid').v4;
 const btoa = require('btoa')
 
 /**
@@ -47,7 +47,7 @@ module.exports = (schemaPart, schemaName) => {
       case 'email':
         return randomString(randomNumber(10, 15)) + '@' + randomString(randomNumber(10, 15)) + '.com'
       case 'uuid':
-        return uuidv1()
+        return uuidv4()
       case 'uri':
         return 'https://www.' + randomString(randomNumber(10, 15)) + '.com'
       case 'hostname':
