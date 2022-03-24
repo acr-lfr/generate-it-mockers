@@ -9,11 +9,10 @@
     "url": "https://github.com/acrontum/generate-it-mockers"
   },
   "dependencies": {
+    "@faker-js/faker": "^6.0.0",
     "btoa": "^1.2.1",
-    "faker": "^4.1.0",
     "uuid": "^8.3.2"
   },
   "author": "Acrontum GmbH",
-  "license": "MIT",
-  "devDependencies": {}
+  "license": "MIT"
 }
