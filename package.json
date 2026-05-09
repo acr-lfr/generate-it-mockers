@@ -11,7 +11,7 @@
   "dependencies": {
     "@faker-js/faker": "^6.0.0",
     "btoa": "^1.2.1",
-    "uuid": "^8.3.2"
+    "uuid": "^14.0.0"
   },
   "author": "Acrontum GmbH",
   "license": "MIT"
